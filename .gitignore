@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+*.backup
+*.bak
+*.before_*
+__pycache__/
+*.pyc
+.venv/
+venv/
+memory/
+logs/
+backups/
+projects/
+core/web_search_backup.py
+*.backup_*
