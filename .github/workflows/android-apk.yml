@@ -33,12 +33,13 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
 
       - name: Build Debug APK
         working-directory: android-project
         run: |
-          chmod +x gradlew
-          ./gradlew --no-daemon assembleDebug
+          gradle --no-daemon assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
